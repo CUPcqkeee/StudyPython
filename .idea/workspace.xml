@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2e3c20-5c93-4e87-af99-e1d5b77381ed" name="Changes" comment="">
+    <list default="true" id="db2e3c20-5c93-4e87-af99-e1d5b77381ed" name="Changes" comment="Крестики-Нолики">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tic-Tac-Toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tic-Tac-Toe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -27,13 +28,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "D:/StudyPython",
     "settings.editor.selected.configurable": "discord-application"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Compound.Function">
     <configuration name="Function" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
@@ -115,6 +118,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666074114197</updated>
     </task>
+    <task id="LOCAL-00001" summary="Крестики-Нолики">
+      <created>1666095848300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666095848300</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,9 +139,13 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Крестики-Нолики" />
+    <option name="LAST_COMMIT_MESSAGE" value="Крестики-Нолики" />
+  </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/Tic-Tac-Toe.py" line="58">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/Tic-Tac-Toe.py" line="69">
         <watch expression="i = [5,6,7,8]" language="Python" />
       </inline-watch>
     </watches-manager>
