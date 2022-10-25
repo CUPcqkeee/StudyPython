@@ -1,48 +1,92 @@
-# Крестики-Нолики
+# Создание структуры карты в консоли
+maps = [1, 2, 3,
+        4, 5, 6,
+        7, 8, 9,
+        "――――――",
+        "|"]
+
+# Вывод победных линий
+victory = [[0, 1, 2],
+           [3, 4, 5],
+           [6, 7, 8],
+           [0, 3, 6],
+           [1, 4, 7],
+           [2, 5, 8],
+           [0, 4, 8],
+           [2, 4, 6]]
 
 
-def fun(line):
-    if line.replace('*', 'x') == 'xxx':
-        return 'x'
-    if line.replace('*', '0') == '000':
-        return '0'
-    return 'x0'
+# Вывод карты на экран
+def print_maps():
+    print(maps[9])
+
+    print(maps[0], end=" ")
+    print(maps[10], end=" ")
+    print(maps[1], end=" ")
+    print(maps[10], end=" ")
+    print(maps[2])
+
+    print(maps[3], end=" ")
+    print(maps[10], end=" ")
+    print(maps[4], end=" ")
+    print(maps[10], end=" ")
+    print(maps[5])
+
+    print(maps[6], end=" ")
+    print(maps[10], end=" ")
+    print(maps[7], end=" ")
+    print(maps[10], end=" ")
+    print(maps[8])
+
+    print(maps[9])
 
 
-result = 'x0'
-board = []
+# Функция хода в ячейки
+def move_maps(move, value):
+    ind = maps.index(move)
+    maps[ind] = value
 
-n = int(input())
 
-# получаем и сразу проверяем строки
-for _ in range(n):
-    line = input().replace(' ', '')
-    result = fun(line)
-    if result != 'x0':
-        break
-    board.append(line)
+# Ядро программы
+game_over = False
+player1 = True
 
-# если в строках нет выигрышной комбинации проверяем столбцы
-if result == 'x0':
-    for i in range(n):
-        coll = ''
-        for j in range(n):
-            coll += board[j][i]
-        result = fun(coll)
-        if result != 'x0':
-            break
 
-# если в столбцах нет выигрышной комбинации проверяем диагонали
-if result == 'x0':
-    coll = ''
-    for i in range(n):
-        coll += board[i][i]
-    result = fun(coll)
+# Получить текущий результат игры
+def get_result():
+    win = ""
 
-if result == 'x0':
-    coll = ''
-    for i in range(n):
-        coll += board[i][-1 - i]
-    result = fun(coll)
+    for i in victory:
+        if maps[i[0]] == "☒" and maps[i[1]] == "☒" and maps[i[2]] == "☒":
+            win = "Игрок 1"
+        if maps[i[0]] == "🄾" and maps[i[1]] == "🄾" and maps[i[2]] == "🄾":
+            win = "Игрок 2"
 
-print(result)
+    return win
+
+
+while game_over == False:
+
+    # Выводим карту перед началом игры
+    print_maps()
+
+    # Функция, вопроса хода
+    if player1:
+        value = "☒"
+        move = int(input("Игрок 1, ваш ход: "))
+    else:
+        value = "🄾"
+        move = int(input("Игрок 2, ваш ход: "))
+
+    move_maps(move, value)  # делаем ход в указанную ячейку
+    win = get_result()  # определим победителя
+    if win != "":
+        game_over = True
+    else:
+        game_over = False
+
+    player1 = not (player1)
+
+# Конец игры
+print_maps()
+print("Победил", win)
