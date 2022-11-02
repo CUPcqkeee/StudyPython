@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db2e3c20-5c93-4e87-af99-e1d5b77381ed" name="Changes" comment="Крестики-Нолики">
-      <change afterPath="$PROJECT_DIR$/KrestikiNoliki.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShifrCezarya.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2022_15_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2022_15_25__Changes_.xml" beforeDir="false" />
+    <list default="true" id="db2e3c20-5c93-4e87-af99-e1d5b77381ed" name="Changes" comment="Шифр Цезаря">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tic-Tac-Toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tic-Tac-Toe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666095848300</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Шифр Цезаря">
+      <created>1667396563158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667396563158</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,7 +183,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Крестики-Нолики" />
-    <option name="LAST_COMMIT_MESSAGE" value="Крестики-Нолики" />
+    <MESSAGE value="Шифр Цезаря" />
+    <option name="LAST_COMMIT_MESSAGE" value="Шифр Цезаря" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
