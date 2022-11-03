@@ -1,4 +1,6 @@
 # Создание структуры карты в консоли
+from KrestikiNoliki import NUM_SQUARES, EMPTY
+
 maps = [1, 2, 3,
         4, 5, 6,
         7, 8, 9,
@@ -86,6 +88,26 @@ while game_over == False:
         game_over = False
 
     player1 = not (player1)
+
+
+def error_step(maps, player1):
+    legal = legal_moves(maps)
+    step = None
+    while step not in legal:
+        if step not in legal:
+            print("\nДанной поле занято, выбирайте другое\n")
+    print("Хорошо.....")
+    return step
+
+
+def legal_moves(board):
+    """Создает список доступных ходов """
+    moves = []
+    for square in range(NUM_SQUARES):
+        if board[square] == EMPTY:
+            moves.append(square)
+    return moves
+
 
 # Конец игры
 print_maps()
