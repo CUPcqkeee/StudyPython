@@ -3,10 +3,10 @@ import datetime
 import disnake
 from disnake.ext import commands
 
-from discord_bot.cogs.helpmenu import HelpMenu
-from discord_bot.cogs.devmenu import DevMenu
-
 from disnake import Button, ButtonStyle, member, user, Client, client
+
+from cogs.devmenu import DevMenu
+from cogs.helpmenu import HelpMenu
 
 
 class SlashCommands(commands.Cog):
@@ -53,24 +53,6 @@ class SlashCommands(commands.Cog):
             await ctx.response.send_message(f'{ctx.author.mention}, У вас недостаточно прав!', delete_after=0.5)
         else:
             raise error
-
-    @commands.slash_command(name="menu", description="Вывод меню с выбором команд")
-    async def menu(self, ctx):
-        view = HelpMenu()
-        embed = disnake.Embed(colour=disnake.Colour.blue(), title="Помощь по моим командам")
-        embed.add_field(name="Ниже будут предоставлены кнопки выбора \nНажмите на одну из понравившейся Вам\n",
-                        value="\nПриятной Вам игры на **MineSkills**!", inline=True)
-        embed.set_footer(text=commands.user.name, icon_url=commands.user.avatar)
-        embed.set_image(url="https://i.gifer.com/7Zc6.gif")
-        await ctx.response.send_message(embed=embed, view=view)
-
-    @commands.slash_command(name="dev", description="Команда проекта MineSkills")
-    async def dev(self, ctx):
-        view = DevMenu()
-        emb = disnake.Embed(title='Команда проекта MineSkills',
-                            description='Ниже будет предоставлены кнопки выбора\n определённого члена команды\nВыбор лежит лишь за Вами.')
-        emb.set_image(url='https://i.gifer.com/4Cb2.gif')
-        await ctx.response.send_message(embed=emb, view=view)
 
 
 def setup(bot: commands.Bot):

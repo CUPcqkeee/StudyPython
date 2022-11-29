@@ -69,6 +69,16 @@ class DevMenu(commands.Cog, disnake.ui.View):
         emb.set_footer(text='«Лучший выход всегда через». ©️ Роберт Фрост',
                        icon_url='https://minecraft-heads.com/media/k2/items/cache/a50d832102cc6e332d683d2706cedf12_XS.jpg')
         await ctx.response.send_message(embed=emb)
+        
+        
+        
+    @commands.slash_command(name="dev", description="Команда проекта MineSkills")
+    async def dev(self, ctx):
+        view = DevMenu()
+        emb = disnake.Embed(title='Команда проекта MineSkills',
+                            description='Ниже будет предоставлены кнопки выбора\n определённого члена команды\nВыбор лежит лишь за Вами.')
+        emb.set_image(url='https://i.gifer.com/4Cb2.gif')
+        await ctx.response.send_message(embed=emb, view=view)
 
 
 def setup(bot: commands.Bot):

@@ -1,5 +1,3 @@
-
-
 import disnake
 
 from config import settings
